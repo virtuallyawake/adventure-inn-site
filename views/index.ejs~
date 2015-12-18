@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Adventure Inn</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+				   maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="designmodo-startup/flat-ui/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="designmodo-startup/flat-ui/css/flat-ui.css">
+    <!-- Using only with Flat-UI (free)-->
+    <link rel="stylesheet" href="designmodo-startup/common-files/css/icon-font.css">
+    <!-- end -->
+    <link rel="stylesheet" href="designmodo-startup/common-files/css/animations.css">
+    
+    <!-- If you don't use any of these blocks just remove unnecessary CSS --
+    -- files -->
+    <!-- content -->
+    <link rel="stylesheet" href="designmodo-startup/ui-kit/ui-kit-content/css/style.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="designmodo-startup/ui-kit/ui-kit-footer/css/style.css">
+    <!-- header -->
+    <link rel="stylesheet" href="designmodo-startup/ui-kit/ui-kit-header/css/style.css">
+    <!-- price -->
+    <link rel="stylesheet" href="designmodo-startup/ui-kit/ui-kit-price/css/style.css">
+
+    <!-- My css -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+
+    <body>
+
+      <header class="header-10">
+	<div class="container">
+          <div class="row">
+            <div class="navbar col-sm-12" role="navigation">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle"></button>
+                <a class="brand" href="#">Adventure Inn</a>
+              </div>
+              <div class="collapse navbar-collapse pull-right">
+                <ul class="nav pull-left">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+                <form class="navbar-form pull-left">
+                  <a class="btn btn-info" href="#">Sign up</a>
+                </form>
+              </div>
+            </div>
+          </div>
+	</div>
+      </header>
+      <section class="header-10-sub v-center bg-midnight-blue">
+	<div class="background">&nbsp;</div>
+	<div>
+          <div class="container">
+            <div class="hero-unit">
+	      <div class="row">
+		<div class="well center-block">
+		  <h1>Coming soon</h1>
+		  <a href="#"><img src="images/app-store.png"></a>
+		  <a href="#"><img src="images/google-play.png"></a>
+		</div>
+              </div>
+	    </div>
+          </div>
+	</div>
+      </section>
+
+      <!-- Leave your email -->
+      <section class="content-13 subscribe-form bg-turquoise">
+	<div class="container">
+          <div class="row">
+            <form id="submitEmailForm" method="POST">
+              <div class="col-sm-8">
+                <input type="email" placeholder="Enter your e-mail"
+		       spellcheck="false">
+              </div>
+              <div class="col-sm-4">
+                <button id="submitEmailButton" class="btn btn-large btn-primary" type="submit">
+                  Sign up for our beta
+                </button>
+              </div>
+            </form>
+          </div>
+	</div>
+      </section>        
+
+      <!-- footer-3 -->
+      <footer class="footer-3">
+        <div class="container">
+          <div class="row v-center">
+            <div class="col-sm-2">
+              <a class="brand" href="#">Coders Co.</a>
+            </div>
+            <div class="col-sm-7">
+              <div class="additional-links">
+                Be sure to take a look to
+		our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <h6>Made in Amsterdam</h6>
+              <div class="address">
+                Zieseniskade 21, 1017 RT<br>Amsterdam, The Netherlands
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="designmodo-startup/common-files/js/jquery-1.10.2.min.js"></script>
+        <script src="designmodo-startup/flat-ui/js/bootstrap.min.js"></script>
+        <script src="designmodo-startup/common-files/js/modernizr.custom.js"></script>
+        <script src="designmodo-startup/common-files/js/page-transitions.js"></script>
+        <script src="designmodo-startup/common-files/js/startup-kit.js"></script>
+	<script>
+          $("[id^=submitEmailButton]").click(function(evt) {
+            var buttonId = evt.target.id;
+            var formId = buttonId.replace("Button", "Form");
+            var url = "/submit-email";
+            $.ajax({
+              type: "POST",
+              url: url,
+              data: $("#" + formId).serialize(), // serializes the form's elements.
+              success: function(data) {
+                alert("Thank you. We will get in touch with you shortly."); // show response from the script.
+              }
+            });
+
+            return false; // avoid to execute the actual submit of the form.
+          });
+	</script>
+    </body>
+</html>

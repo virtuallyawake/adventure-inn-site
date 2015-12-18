@@ -1,0 +1,31 @@
+.header-10-sub .background {
+  background-image: url("../images/AdventureInn-FeatureGraphic-1024x500.png");
+  opacity: 90;
+}
+
+@media (max-width: 768px) {
+    .background {
+	background-size: cover;
+    }
+    
+    .header-10-sub {
+	height: 560px;
+    }
+}
+
+.header-10-sub img {
+    height: 64px;
+    padding: 5px;
+}
+
+.header-10-sub .well {
+    background: rgba(75, 75, 100, 0.35);
+    border: none;
+    max-width: 420px;
+}
+
+.header-10-sub .hero-unit h1 {
+    color: #fe0;
+    text-shadow: 1px 0px 6px #333;
+    font-weight: 400;
+}

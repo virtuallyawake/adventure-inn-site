@@ -1,0 +1,14 @@
+.header-10-sub .background {
+  background-image: url("../images/AdventureInn-FeatureGraphic-1024x500.png");
+  opacity: 90;
+}
+
+.header-10-sub img {
+    height: 64px;
+    padding: 5px;
+}
+
+.header-10-sub .well {
+    background: rgba(238, 238, 238, 0.35);
+    border: none;
+}
